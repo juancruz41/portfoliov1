@@ -11,7 +11,7 @@ function Header() {
 
         {/* 📌 Título */}
         <Typography variant="h6" sx={{ flexGrow: 1, color: "#C69749" }}>
-          Juan Cruz - Backend Developer
+          Portfolio
         </Typography>
 
         {/* 📌 Menú */}

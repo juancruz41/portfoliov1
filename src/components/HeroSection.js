@@ -13,12 +13,19 @@ function HeroSection() {
   const onCaptchaChange = (value) => setCaptchaValue(value);
 
   return (
+    
     <Container sx={{ textAlign: "center", padding: "40px 0" }}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Juan Cruz - Backend Developer
       </Typography>
       <Typography variant="h6" sx={{ marginBottom: 2 }}>
-        Specializing in scalable backend systems with Node.js & Python.
+        Backend developer specializing in robust and scalable backend systems with Node.js & Python.
+      </Typography>
+      <Typography variant="h5" gutterBottom>
+        About Me
+      </Typography>
+      <Typography variant="h6" sx={{ marginBottom: 2 }}>
+        Hey! I’m a backend developer who’s all about building fast and scalable server-side apps. I’m loved to working with cloud services and databases to create cool, reliable solutions. Whether it’s tackling tricky problems or teaming up with others, I love making tech that just works.
       </Typography>
 
       <Button variant="contained" color="primary" onClick={handleOpen} sx={{ marginRight: 1 }}>
