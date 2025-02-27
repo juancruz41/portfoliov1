@@ -13,7 +13,6 @@ function HeroSection() {
   const onCaptchaChange = (value) => setCaptchaValue(value);
 
   return (
-    
     <Container sx={{ textAlign: "center", padding: "40px 0" }}>
       <Typography variant="h5" gutterBottom>
         Juan Cruz - Backend Developer
@@ -25,21 +24,16 @@ function HeroSection() {
         About Me
       </Typography>
       <Typography variant="h6" sx={{ marginBottom: 2 }}>
-        Hey! I’m a backend developer who’s all about building fast and scalable server-side apps. I’m loved to working with cloud services and databases to create cool, reliable solutions. Whether it’s tackling tricky problems or teaming up with others, I love making tech that just works.
+        Hey! I’m a backend developer who’s all about building fast and scalable server-side apps. I’m loved to working
+        with cloud services and databases to create cool, reliable solutions. Whether it’s tackling tricky problems or
+        teaming up with others, I love making tech that just works.
       </Typography>
 
       <Button variant="contained" color="primary" onClick={handleOpen} sx={{ marginRight: 1 }}>
         Contact Me
       </Button>
 
-      <Button
-        variant="contained"
-        color="secondary"
-        component="a"
-        href="/cv_juancruz.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Button variant="contained" color="secondary" component="a" href="/cv_juancruz.pdf" target="_blank" rel="noopener noreferrer">
         View CV
       </Button>
 
@@ -94,14 +88,7 @@ function HeroSection() {
 
               <ReCAPTCHA sitekey="TU_CLAVE_SITE_KEY" onChange={onCaptchaChange} />
 
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                disabled={state.submitting || !captchaValue}
-                fullWidth
-                sx={{ marginTop: 2 }}
-              >
+              <Button type="submit" variant="contained" color="primary" disabled={state.submitting || !captchaValue} fullWidth sx={{ marginTop: 2 }}>
                 Submit
               </Button>
             </form>
