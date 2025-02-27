@@ -29,7 +29,7 @@ function HeroSection() {
         variant="contained"
         color="secondary"
         component="a"
-        href="/CV_JUANCRUZ.pdf"
+        href="/cv_juancruz.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
