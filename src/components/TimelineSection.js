@@ -54,7 +54,7 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
         <Box
           sx={{
             position: "absolute",
-            bottom: 40,
+            bottom: 25,
             left: 0,
             width: "100%",
             height: 100,
@@ -66,7 +66,7 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
       <Button
         onClick={() => setExpanded(!expanded)}
         variant="contained"
-        sx={{ mt: 2, backgroundColor: "primary.main", color: "#000", "&:hover": { backgroundColor: "secondary.main" } }}
+        sx={{ mt: 2, bottom: -20,  backgroundColor: "primary.main", color: "#000", "&:hover": { backgroundColor: "secondary.main" } }}
       >
         {expanded ? "Show Less" : "Show More"}
       </Button>

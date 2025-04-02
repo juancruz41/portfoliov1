@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
+import ParticlesBackground from "./components/ParticlesBackground"; // Importa el fondo animado
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
@@ -10,7 +11,7 @@ import TimelineSection from "./components/TimeLineSection";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
-    background: { default: "#000000", paper: "#121212" },
+    background: { default: "transparent", paper: "#121212" },
     text: { primary: "#C69749", secondary: "#B8860B" },
     primary: { main: "#C69749" },
     secondary: { main: "#B8860B" },
@@ -49,13 +50,11 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+      <ParticlesBackground /> {/* Fondo animado con partículas */}
       <Header />
       <HeroSection />
-
-      {/* Timeline Sections */}
       <TimelineSection title="Experience" items={experienceItems} />
       <TimelineSection title="My Learning Path" items={learningPathItems} useIcons={true} techIcons={techIcons} />
-
       <Skills />
       <Projects />
       <Footer />
@@ -64,3 +63,4 @@ function App() {
 }
 
 export default App;
+
