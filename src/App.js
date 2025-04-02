@@ -6,7 +6,7 @@ import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import TimelineSection from "./components/TimeLineSection";
+import TimelineSection from "./components/TimelineSection";
 
 const darkTheme = createTheme({
   palette: {
