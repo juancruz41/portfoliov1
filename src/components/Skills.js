@@ -10,14 +10,15 @@ const techIcons = {
   Node: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   Flask: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
-  SQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-  AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+  MySQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  AWS: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+  Firebase: "https://cdn.simpleicons.org/firebase/FFCA28",
 };
 
 // 📌 Datos de habilidades organizados en categorías
 const skillsData = [
   { title: "Frontend", skills: ["HTML5", "CSS3", "JavaScript", "React"] },
-  { title: "Backend", skills: ["Node", "Python", "Flask", "SQL", "AWS"] },
+  { title: "Backend", skills: ["Node", "Python", "Flask", "MySQL", "Firebase", "AWS"] },
   { title: "Languages", skills: ["JavaScript", "Python"] },
 ];
 
