@@ -8,11 +8,11 @@ function Header() {
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
   const menuItems = [
+    { label: "About Me", id: "about" },
     { label: "Experience", id: "experience" },
     { label: "Education", id: "learning-path" },
     { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
-    { label: "About Me", id: "about" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -29,7 +29,7 @@ function Header() {
       <Toolbar>
         {/* 📌 Logo */}
         <Box component="img" src={logo} alt="Logo" sx={{ height: 40, marginRight: 2 }} />
-        <Typography variant="h6" sx={{ flexGrow: 1, color: "#C69749" }}>Juan Cruz Gonzalez</Typography>
+        <Typography component="a" href="https://www.linkedin.com/in/juan-cruz-morales-gonzalez/"  target= "_blank"   rel="noopener noreferrer" variant="h6" sx={{ flexGrow: 1, color: "#C69749" }}>Juan Cruz Gonzalez</Typography>
 
         {/* 📌 Menú para escritorio */}
         <Box sx={{ display: { xs: "none", md: "flex" } }}>

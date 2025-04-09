@@ -8,7 +8,7 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
   const visibleItems = expanded ? items : items.slice(0, 2);
 
   return (
-    <Container sx={{ mt: 4, textAlign: "center", position: "relative" }}>
+    <Container id="experience" sx={{ mt: 4, textAlign: "center", position: "relative" }}>
       <Typography variant="h4" sx={{ mb: 2, color: "primary.main" }}>
         {title}
       </Typography>

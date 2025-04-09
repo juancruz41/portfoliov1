@@ -24,7 +24,7 @@ const skillsData = [
 
 function Skills() {
   return (
-    <Container sx={{ padding: "40px 0", textAlign: "center" }}>
+    <Container id="skills" sx={{ padding: "40px 0", textAlign: "center" }}>
       <Typography variant="h4" gutterBottom sx={{ color: "primary.main" }}>
         Technical Skills
       </Typography>

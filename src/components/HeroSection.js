@@ -13,7 +13,7 @@ function HeroSection() {
   const onCaptchaChange = (value) => setCaptchaValue(value);
 
   return (
-    <Container sx={{ textAlign: "center", padding: "40px 0" }}>
+    <Container id="about" sx={{ textAlign: "center", padding: "40px 0" }}>
       <Typography variant="h5" gutterBottom>
         Backend Developer
       </Typography>

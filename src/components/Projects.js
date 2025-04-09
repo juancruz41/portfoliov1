@@ -9,7 +9,7 @@ const projectList = [
 
 function Projects() {
   return (
-    <Container sx={{ padding: "20px 0" }}>
+    <Container id="projects" sx={{ padding: "20px 0" }}>
       <Typography variant="h4" gutterBottom>
         Projects
       </Typography>
