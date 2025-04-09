@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Typography, Grid, Card, CardContent } from "@mui/material";
 
 const projectList = [
-  { title: "E-commerce Backend System", description: "Scalable backend using Node.js & MongoDB. REST APIs & authentication." },
-  { title: "Chat Application", description: "Real-time chat with WebSockets using Python & Flask. Deployed on AWS." },
-  { title: "Analytics Dashboard", description: "Dashboard with React, Node.js & PostgreSQL to track metrics." },
+  { title: "E-commerce Backend System", description: "Scalable backend using Node.js & MySQL. REST APIs & authentication." },
+  { title: "Chat Application", description: "Real-time chat with WebSockets using Python & Flask." },
+  { title: "Analytics Dashboard", description: "Dashboard with React, Node.js & Firebase to track metrics." },
 ];
 
 function Projects() {
@@ -16,7 +16,7 @@ function Projects() {
       <Grid container spacing={2}>
         {projectList.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card>
+            <Card sx={{ backgroundColor: "#1e1e1e", color: "text.primary", textAlign: "left", boxShadow: 3 }}>
               <CardContent>
                 <Typography variant="h6">{project.title}</Typography>
                 <Typography>{project.description}</Typography>

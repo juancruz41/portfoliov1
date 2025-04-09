@@ -15,7 +15,7 @@ function Footer() {
       }}
     >
       <Typography variant="body1">
-        Email: juancruz@example.com | Phone: +123 456 7890
+      © 2025 Juan Cruz Gonzalez. All rights reserved.
       </Typography>
     </Container>
   );
