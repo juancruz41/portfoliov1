@@ -15,10 +15,10 @@ function HeroSection() {
   return (
     <Container sx={{ textAlign: "center", padding: "40px 0" }}>
       <Typography variant="h5" gutterBottom>
-        Juan Cruz - Backend Developer
+        Backend Developer
       </Typography>
       <Typography variant="h6" sx={{ marginBottom: 2 }}>
-        Backend developer specializing in robust and scalable backend systems with Node.js & Python.
+        Specializing in robust and scalable backend systems with Node.js & Python.
       </Typography>
       <Typography variant="h5" gutterBottom>
         About Me

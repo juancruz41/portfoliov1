@@ -35,7 +35,7 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <Card sx={{ backgroundColor: "#1e1e1e", color: "text.primary", textAlign: "center", p: 2, boxShadow: "0px 4px 10px rgba(58, 58, 58, 0.8)" }}>
+                  <Card sx={{ backgroundColor: "#1e1e1e", color: "text.primary", textAlign: "center", p: 2, boxShadow: "0px 4px 10px #1e1e1e" }}>
                     <CardContent>
                       <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                         {item.year}
@@ -58,7 +58,7 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
             left: 0,
             width: "100%",
             height: 100,
-            background: "linear-gradient(to bottom, rgba(0,0,0,0) 10%, #000000 90%)",
+            background: "linear-gradient(to bottom, rgba(0,0,0,0) 10%,#1e1e1e 90%)",
           }}
         />
       )}

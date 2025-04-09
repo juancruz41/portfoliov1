@@ -29,7 +29,7 @@ function Header() {
       <Toolbar>
         {/* 📌 Logo */}
         <Box component="img" src={logo} alt="Logo" sx={{ height: 40, marginRight: 2 }} />
-        <Typography variant="h6" sx={{ flexGrow: 1, color: "#C69749" }}>Portfolio</Typography>
+        <Typography variant="h6" sx={{ flexGrow: 1, color: "#C69749" }}>Juan Cruz Gonzalez</Typography>
 
         {/* 📌 Menú para escritorio */}
         <Box sx={{ display: { xs: "none", md: "flex" } }}>
