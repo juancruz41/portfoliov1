@@ -30,20 +30,20 @@ const techIcons = {
 };
 
 const experienceItems = [
-  { year: "2024 - Present", description: "Technical High School: Teaching computer system repair and maintenance in Secondary Schools." },
-  { year: "2021 - 2024", description: "GST3D: Development in e-commerce using HTML, CSS, JavaScript. Management and customization of existing ecommerce in Woocommerce and Shopify" },
-  { year: "2020 - 2021", description: "ProyectoColor - ItProuser: Installation, repair, and maintenance of equipment. Data entry, backups and updates" },
-  { year: "2019 - 2020", description: "Freelance: Repair and maintenance of CPUs, laptops, monitors, printers." },
+  { year: "2024 - Present", description: "Technical High School Teacher:  Teaching computer systems installation, repair, and maintenance at secondary level." },
+  { year: "2021 - 2024", description: " Junior Web Developer – GST3D: Developed and maintained the main e-commerce platform using HTML5, CSS, and JavaScript. Managed and customized existing WooCommerce and Shopify stores to enhance functionality and user experience." },
+  { year: "2020 - 2021", description: " Technical Support – ProyectoColor / ItProuser S.A.: Performed hardware maintenance and network support. Managed data entry tasks, regular backups, and system updates." },
+  { year: "2019 - 2020", description: "Freelance IT Technician:  Provided repair and maintenance services for desktops, laptops, monitors, and printers." },
 ];
 
 const learningPathItems = [
-  { year: "2025", description: "Deepening Flutter & Firebase for mobile development." },
-  { year: "2024", description: "Learning Django. Flutter & Firebase for Mobile Apps." },
-  { year: "2023", description: "Node.js and Python basics." },
-  { year: "2022", description: "React.js, AWS, Hostinger. Debugging scalable backend systems." },
-  { year: "2021", description: "WooCommerce & Shopify, first knowledge of JavaScript." },
-  { year: "2020", description: "First knowledge of SEO and SQL." },
-  { year: "2019", description: "Technical School Graduation. HTML5, CSS, PHP, MySQL." },
+  { year: "2025", description: "Advanced study of Flutter & Firebase to better understand mobile API integration. Deepening backend practices and deployment strategies (CI/CD, containers, cloud)." },
+  { year: "2024", description: "Began learning Django (Python) for full-stack web development. Built first mobile projects using Flutter & Firebase." },
+  { year: "2023", description: "Gained strong foundations in Node.js and Python for backend development. Explored scalable architecture and backend best practices. Explored scalable architecture and backend best practices." },
+  { year: "2022", description: "Practiced with React.js and explored cloud hosting services like AWS and Hostinger. Debugging and performance tuning in backend systems." },
+  { year: "2021", description: "Hands-on experience with WooCommerce and Shopify. First steps with JavaScript for frontend and business logic." },
+  { year: "2020", description: "Basic knowledge of SEO and SQL. Web maintenance and simple database tasks." },
+  { year: "2019", description: "Graduated from technical high school. Learned HTML5, CSS, PHP, and MySQL fundamentals." },
 ];
 
 function App() {
@@ -63,4 +63,3 @@ function App() {
 }
 
 export default App;
-

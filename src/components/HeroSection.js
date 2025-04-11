@@ -24,9 +24,9 @@ function HeroSection() {
         About Me
       </Typography>
       <Typography variant="h6" sx={{ marginBottom: 2 }}>
-        Hey! I’m a backend developer who’s all about building fast and scalable server-side apps. I’m loved to working
-        with cloud services and databases to create cool, reliable solutions. Whether it’s tackling tricky problems or
-        teaming up with others, I love making tech that just works.
+        Hey! I’m a backend developer passionate about building fast and scalable server-side applications. 
+        I enjoy working with cloud services and databases to create reliable and efficient solutions. 
+        Whether it’s solving complex problems or collaborating with a team, I take pride in building technology that simply works.
       </Typography>
 
       <Button variant="contained" color="primary" onClick={handleOpen} sx={{ marginRight: 1 }}>
