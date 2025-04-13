@@ -1,11 +1,34 @@
 import React, { useState } from "react";
-import { Container, Typography, Box, Card, CardContent, Button } from "@mui/material";
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from "@mui/lab";
+import {
+  Container,
+  Typography,
+  Card,
+  CardContent,
+  Collapse,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+} from "@mui/lab";
 import { motion } from "framer-motion";
 
 const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => {
-  const [expanded, setExpanded] = useState(false);
-  const visibleItems = expanded ? items : items.slice(0, 2);
+  const [expandedCards, setExpandedCards] = useState({});
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const toggleCard = (index) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
 
   return (
     <Container id="experience" sx={{ mt: 4, textAlign: "center", position: "relative" }}>
@@ -13,63 +36,63 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
         {title}
       </Typography>
 
-      <Box sx={{ position: "relative", overflow: "hidden", maxHeight: expanded ? "none" : "280px", transition: "max-height 0.3s ease" }}>
-        <Timeline position="alternate">
-          {visibleItems.map((item, index) => (
-            <TimelineItem key={index}>
-              <TimelineSeparator>
-                {useIcons ? (
-                  <TimelineDot sx={{ bgcolor: "transparent" }}>
-                    <img src={techIcons[item.year]} alt={item.year} width="30" height="30" />
-                  </TimelineDot>
-                ) : (
-                  <TimelineDot sx={{ bgcolor: "primary.main" }} />
-                )}
-                {index !== items.length - 1 && <TimelineConnector sx={{ bgcolor: "primary.main" }} />}
-              </TimelineSeparator>
+      <Timeline position="alternate">
+        {items.map((item, index) => (
+          <TimelineItem key={index}>
+            <TimelineSeparator>
+              {useIcons ? (
+                <TimelineDot sx={{ bgcolor: "transparent" }}>
+                  <img src={techIcons[item.year]} alt={item.year} width="30" height="30" />
+                </TimelineDot>
+              ) : (
+                <TimelineDot sx={{ bgcolor: "primary.main" }} />
+              )}
+              {index !== items.length - 1 && <TimelineConnector sx={{ bgcolor: "primary.main" }} />}
+            </TimelineSeparator>
 
-              <TimelineContent>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
+            <TimelineContent sx={{ px: { xs: 0, sm: 2 } }}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card
+                  sx={{
+                    backgroundColor: "#1e1e1e",
+                    color: "text.primary",
+                    textAlign: "center",
+                    p: 2,
+                    boxShadow: "0px 4px 10px #1e1e1e",
+                    width: { xs: "100%", sm: "80%" },
+                    maxWidth: { sm: "800px" },
+                    mx: { xs: 0, sm: "auto" },
+                    cursor: isMobile ? "pointer" : "default",
+                  }}
+                  onClick={() => isMobile && toggleCard(index)}
                 >
-                  <Card sx={{ backgroundColor: "#1e1e1e", color: "text.primary", textAlign: "center", p: 2, boxShadow: "0px 4px 10px #1e1e1e" }}>
-                    <CardContent>
-                      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                        {item.year}
+                  <CardContent>
+                    <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                      {item.year}
+                    </Typography>
+                    {isMobile ? (
+                      <Collapse in={expandedCards[index]}>
+                        <Typography variant="body1" sx={{ mt: 1 }}>
+                          {item.description}
+                        </Typography>
+                      </Collapse>
+                    ) : (
+                      <Typography variant="body1" sx={{ mt: 1 }}>
+                        {item.description}
                       </Typography>
-                      <Typography variant="body1">{item.description}</Typography>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </Box>
-
-      {!expanded && (
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: 25,
-            left: 0,
-            width: "100%",
-            height: 100,
-            background: "linear-gradient(to bottom, rgba(0,0,0,0) 10%,#1e1e1e 90%)",
-          }}
-        />
-      )}
-
-      <Button
-        onClick={() => setExpanded(!expanded)}
-        variant="contained"
-        sx={{ mt: 2, bottom: -20,  backgroundColor: "primary.main", color: "#000", "&:hover": { backgroundColor: "secondary.main" } }}
-      >
-        {expanded ? "Show Less" : "Show More"}
-      </Button>
+                    )}
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
     </Container>
   );
 };
