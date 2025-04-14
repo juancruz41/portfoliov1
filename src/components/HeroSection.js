@@ -37,7 +37,7 @@ function HeroSection() {
         View CV
       </Button>
 
-      {/* MODAL PARA FORMULARIO DE CONTACTO */}
+      {/* FORMULARIO DE CONTACTO */}
       <Modal open={open} onClose={handleClose} aria-labelledby="contact-form">
         <Box
           sx={{
@@ -46,7 +46,7 @@ function HeroSection() {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: 400,
-            bgcolor: "black",
+            bgcolor: "#1e1e1e",
             color: "#C69749",
             boxShadow: 24,
             p: 4,
@@ -86,7 +86,7 @@ function HeroSection() {
               />
               <ValidationError prefix="Message" field="message" errors={state.errors} />
 
-              <ReCAPTCHA sitekey="6Lft1OMqAAAAAMhHhmaL5rMHQS2K5VU1Fc_9Uguv" onChange={onCaptchaChange} />
+              <ReCAPTCHA sitekey="6LfYqhgrAAAAAHFKw9QYonVKt7-xXHf2yG4EEBi8" onChange={onCaptchaChange} />
 
               <Button type="submit" variant="contained" color="primary" disabled={state.submitting || !captchaValue} fullWidth sx={{ marginTop: 2 }}>
                 Submit
