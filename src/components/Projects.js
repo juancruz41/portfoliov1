@@ -31,16 +31,16 @@ const projectList = [
   },
   {
     title: "Chat Application",
-    description: "Real-time messaging web app with persistent connections and smooth UX.",
+    description: "Real-time messaging web app with persistent connections and smooth UX.\n\n",
     github: "https://github.com/juancruz41",
     demo: "https://github.com/juancruz41",
     techs: ["Python", "Flask"],
   },
   {
     title: "Analytics Dashboard",
-    description: "Interactive dashboard to visualize and track user metrics and activity in real time.",
+    description: "Interactive dashboard to visualize and track user metrics and activity in real time.\n\n",
     github: "https://github.com/juancruz41",
-    demo: "https://github.com/juancruz41",
+    demo: "https://jcstats.netlify.app",
     techs: ["React", "Node", "Firebase"],
   },
 ];
@@ -66,7 +66,9 @@ function Projects() {
                 <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: 1 }}>
                   {project.title}
                 </Typography>
-                <Typography sx={{ marginBottom: 2 }}>{project.description}</Typography>
+                <Typography sx={{ marginBottom: 2, whiteSpace: 'pre-line' }}>
+                  {project.description}
+                </Typography>
                 <Box
                   display="flex"
                   justifyContent="center"
@@ -111,3 +113,4 @@ function Projects() {
 }
 
 export default Projects;
+

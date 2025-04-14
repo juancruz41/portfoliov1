@@ -91,6 +91,23 @@ function HeroSection() {
               <Button type="submit" variant="contained" color="primary" disabled={state.submitting || !captchaValue} fullWidth sx={{ marginTop: 2 }}>
                 Submit
               </Button>
+              <Box sx={{ marginTop: 3, display: 'flex', alignItems: 'center' }}>
+                <Typography variant="body2" sx={{ color: "#C69749", marginBottom: 1, marginRight: 1 }}>
+                Or connect with me on
+                </Typography>
+              <a
+                href="https://www.linkedin.com/in/juan-cruz-morales-gonzalez/"
+                target="_blank"
+                rel="noopener noreferrer"
+              > 
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                alt="LinkedIn"
+                width="24"
+                height="24"
+              />
+              </a>
+            </Box>
             </form>
           )}
         </Box>
