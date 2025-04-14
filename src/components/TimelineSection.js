@@ -71,7 +71,7 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
                   }}
                   onClick={() => isMobile && toggleCard(index)}
                 >
-                  <CardContent>
+                  <CardContent >
                     <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                       {item.year}
                     </Typography>

@@ -86,7 +86,7 @@ function HeroSection() {
               />
               <ValidationError prefix="Message" field="message" errors={state.errors} />
 
-              <ReCAPTCHA sitekey="TU_CLAVE_SITE_KEY" onChange={onCaptchaChange} />
+              <ReCAPTCHA sitekey="6Lft1OMqAAAAAMhHhmaL5rMHQS2K5VU1Fc_9Uguv" onChange={onCaptchaChange} />
 
               <Button type="submit" variant="contained" color="primary" disabled={state.submitting || !captchaValue} fullWidth sx={{ marginTop: 2 }}>
                 Submit
