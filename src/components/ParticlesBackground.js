@@ -12,7 +12,7 @@ const ParticlesBackground = () => {
       id="tsparticles"
       init={particlesInit}
       options={{
-        fullScreen: { enable: true, zIndex: -1 }, // Asegura que esté detrás del contenido
+        fullScreen: { enable: true, zIndex: -1 },
         background: {
           color: "#282A3A",
         },

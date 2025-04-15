@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Typography, useTheme, Box } from "@mui/material";
 
 function Footer() {
-  const theme = useTheme(); // Accede al tema actual
+  const theme = useTheme(); 
 
   return (
     <Container
@@ -10,11 +10,11 @@ function Footer() {
         textAlign: "center",
         padding: "20px 0",
         marginTop: "20px",
-        backgroundColor: theme.palette.background.default, // Usa el color de fondo del tema
-        color: theme.palette.text.primary, // Usa el color del texto del tema
+        backgroundColor: theme.palette.background.default, 
+        color: theme.palette.text.primary, 
         display: "flex",
-        flexDirection: "column", // Apila los elementos
-        alignItems: "center", // Centra los elementos
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <Typography variant="body1" sx={{ marginBottom: "10px" }}>

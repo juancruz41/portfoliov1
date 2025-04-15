@@ -7,6 +7,7 @@ import {
   Collapse,
   useMediaQuery,
   useTheme,
+  Button,
 } from "@mui/material";
 import {
   Timeline,
@@ -20,6 +21,7 @@ import { motion } from "framer-motion";
 
 const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => {
   const [expandedCards, setExpandedCards] = useState({});
+  const [showAll, setShowAll] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -30,6 +32,8 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
     }));
   };
 
+  const visibleItems = showAll ? items : items.slice(0, 2);
+
   return (
     <Container id="experience" sx={{ mt: 4, textAlign: "center", position: "relative" }}>
       <Typography variant="h4" sx={{ mb: 2, color: "primary.main" }}>
@@ -37,7 +41,7 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
       </Typography>
 
       <Timeline position="alternate">
-        {items.map((item, index) => (
+        {visibleItems.map((item, index) => (
           <TimelineItem key={index}>
             <TimelineSeparator>
               {useIcons ? (
@@ -47,7 +51,9 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
               ) : (
                 <TimelineDot sx={{ bgcolor: "primary.main" }} />
               )}
-              {index !== items.length - 1 && <TimelineConnector sx={{ bgcolor: "primary.main" }} />}
+              {index !== visibleItems.length - 1 && (
+                <TimelineConnector sx={{ bgcolor: "primary.main" }} />
+              )}
             </TimelineSeparator>
 
             <TimelineContent sx={{ px: { xs: 0, sm: 2 } }}>
@@ -71,19 +77,29 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
                   }}
                   onClick={() => isMobile && toggleCard(index)}
                 >
-                  <CardContent >
+                  <CardContent>
                     <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                       {item.year}
                     </Typography>
                     {isMobile ? (
                       <Collapse in={expandedCards[index]}>
                         <Typography variant="body1" sx={{ mt: 1 }}>
-                          {item.description}
+                          {item.description.split("\n").map((line, i) => (
+                            <React.Fragment key={i}>
+                              {line}
+                              <br />
+                            </React.Fragment>
+                          ))}
                         </Typography>
                       </Collapse>
                     ) : (
                       <Typography variant="body1" sx={{ mt: 1 }}>
-                        {item.description}
+                        {item.description.split("\n").map((line, i) => (
+                          <React.Fragment key={i}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        ))}
                       </Typography>
                     )}
                   </CardContent>
@@ -93,6 +109,16 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
           </TimelineItem>
         ))}
       </Timeline>
+
+      {items.length > 2 && (
+        <Button
+          variant="outlined"
+          onClick={() => setShowAll(!showAll)}
+          sx={{ mt: 2, color: "primary.main", borderColor: "primary.main" }}
+        >
+          {showAll ? "Show Less" : "Show More"}
+        </Button>
+      )}
     </Container>
   );
 };

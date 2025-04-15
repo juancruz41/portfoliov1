@@ -10,7 +10,6 @@ import {
   Tooltip,
 } from "@mui/material";
 
-// Iconos de tecnologías
 const techIcons = {
   Node: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   MySQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
@@ -18,7 +17,7 @@ const techIcons = {
   Firebase: "https://cdn.simpleicons.org/firebase/FFCA28",
   Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   Flask: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
-  WebSocket: "https://upload.wikimedia.org/wikipedia/commons/1/1b/WebSocket-logo.svg", // No oficial
+  WebSocket: "https://upload.wikimedia.org/wikipedia/commons/1/1b/WebSocket-logo.svg",
 };
 
 const projectList = [

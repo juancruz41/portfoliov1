@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
-import ParticlesBackground from "./components/ParticlesBackground"; // Importa el fondo animado
+import ParticlesBackground from "./components/ParticlesBackground";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
@@ -30,10 +30,10 @@ const techIcons = {
 };
 
 const experienceItems = [
-  { year: "2024 - Today", description: "Technical High School Teacher:  Teaching computer systems installation, repair, and maintenance at secondary level." },
-  { year: "2021 - 2024", description: " Junior Web Developer – GST3D: Developed and maintained the main e-commerce platform using HTML5, CSS, and JavaScript. Managed and customized existing WooCommerce and Shopify stores to enhance functionality and user experience." },
-  { year: "2020 - 2021", description: " Technical Support – ProyectoColor / ItProuser S.A.: Performed hardware maintenance and network support. Managed data entry tasks, regular backups, and system updates." },
-  { year: "2019 - 2020", description: "Freelance IT Technician:  Provided repair and maintenance services for desktops, laptops, monitors, and printers." },
+  { year: "2024 - Today", description: "Technical High School Teacher: \n\n  Teaching computer systems installation, repair, and maintenance at secondary level." },
+  { year: "2021 - 2024", description: " Junior Web Developer – GST3D: \n\n  Developed and maintained the main e-commerce platform using HTML5, CSS, and JavaScript. Managed and customized existing WooCommerce and Shopify stores to enhance functionality and user experience." },
+  { year: "2020 - 2021", description: " Technical Support – ProyectoColor / ItProuser S.A.: \n\n  Performed hardware maintenance and network support. Managed data entry tasks, regular backups, and system updates." },
+  { year: "2019 - 2020", description: "Freelance IT Technician: \n\n  Provided repair and maintenance services for desktops, laptops, monitors, and printers." },
 ];
 
 const learningPathItems = [
@@ -50,7 +50,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <ParticlesBackground /> {/* Fondo animado con partículas */}
+      <ParticlesBackground /> 
       <Header />
       <HeroSection />
       <TimelineSection title="Experience" items={experienceItems} />

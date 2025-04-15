@@ -32,7 +32,7 @@ function Header() {
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setMobileOpen(false); // Cierra el drawer si está abierto
+    setMobileOpen(false); 
   };
 
   return (
@@ -52,7 +52,6 @@ function Header() {
             Juan Cruz Gonzalez
           </Typography>
 
-          {/* 📌 Menú para escritorio */}
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {menuItems.map((item) => (
               <Button
@@ -65,7 +64,7 @@ function Header() {
             ))}
           </Box>
 
-          {/* 📌 Menú para móviles */}
+          {/* 📌 Menú móvil */}
           <IconButton
             color="inherit"
             edge="end"
@@ -76,7 +75,7 @@ function Header() {
           </IconButton>
         </Toolbar>
 
-        {/* 📌 Drawer para móvil */}
+        {/* 📌 Drawer móvil */}
         <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
           <List sx={{ width: 250, backgroundColor: "#1E1E1E", height: "100%" }}>
             {menuItems.map((item) => (

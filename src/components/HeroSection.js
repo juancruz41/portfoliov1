@@ -6,7 +6,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 function HeroSection() {
   const [open, setOpen] = useState(false);
   const [captchaValue, setCaptchaValue] = useState(null);
-  const [state, handleSubmit] = useForm("xanqgrya"); // Reemplaza con tu Formspree ID
+  const [state, handleSubmit] = useForm("xanqgrya"); 
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

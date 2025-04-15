@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Typography, Grid, Card, CardContent, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 
-// 📌 Íconos de tecnologías desde Devicon
 const techIcons = {
   HTML5: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   CSS3: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
@@ -15,7 +14,6 @@ const techIcons = {
   Firebase: "https://cdn.simpleicons.org/firebase/FFCA28",
 };
 
-// 📌 Datos de habilidades organizados en categorías
 const skillsData = [
   { title: "Frontend", skills: ["HTML5", "CSS3", "JavaScript", "React"] },
   { title: "Backend", skills: ["Node", "Python", "Flask", "MySQL", "Firebase", "AWS"] },
