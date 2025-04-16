@@ -1,5 +1,15 @@
 import React from "react";
-import { Container, Typography, Grid, Card, CardContent, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 
 const techIcons = {
   HTML5: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -29,7 +39,16 @@ function Skills() {
       <Grid container spacing={3} justifyContent="center">
         {skillsData.map((category, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card sx={{ backgroundColor: "#1e1e1e", color: "text.primary", textAlign: "left", boxShadow: 3 }}>
+            <Card
+              sx={{
+                backgroundColor: "#1e1e1e",
+                color: "text.primary",
+                textAlign: "center",
+                boxShadow: 3,
+                mx: { xs: "15px", sm: 0 },
+                mb: { xs: 1.5, sm: 0 },
+              }}
+            >
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: 1 }}>
                   {category.title}

@@ -4,10 +4,13 @@ import {
   Typography,
   Card,
   CardContent,
-  Collapse,
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
   useMediaQuery,
   useTheme,
-  Button,
 } from "@mui/material";
 import {
   Timeline,
@@ -20,16 +23,23 @@ import {
 import { motion } from "framer-motion";
 
 const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => {
-  const [expandedCards, setExpandedCards] = useState({});
   const [showAll, setShowAll] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const toggleCard = (index) => {
-    setExpandedCards((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
+  const handleCardClick = (item) => {
+    if (isMobile) {
+      setSelectedItem(item);
+      setModalOpen(true);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setTimeout(() => setSelectedItem(null), 300);
   };
 
   const visibleItems = showAll ? items : items.slice(0, 2);
@@ -75,24 +85,13 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
                     mx: { xs: 0, sm: "auto" },
                     cursor: isMobile ? "pointer" : "default",
                   }}
-                  onClick={() => isMobile && toggleCard(index)}
+                  onClick={() => handleCardClick(item)}
                 >
                   <CardContent>
                     <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                       {item.year}
                     </Typography>
-                    {isMobile ? (
-                      <Collapse in={expandedCards[index]}>
-                        <Typography variant="body1" sx={{ mt: 1 }}>
-                          {item.description.split("\n").map((line, i) => (
-                            <React.Fragment key={i}>
-                              {line}
-                              <br />
-                            </React.Fragment>
-                          ))}
-                        </Typography>
-                      </Collapse>
-                    ) : (
+                    {!isMobile && (
                       <Typography variant="body1" sx={{ mt: 1 }}>
                         {item.description.split("\n").map((line, i) => (
                           <React.Fragment key={i}>
@@ -118,6 +117,41 @@ const TimelineSection = ({ title, items, useIcons = false, techIcons = {} }) => 
         >
           {showAll ? "Show Less" : "Show More"}
         </Button>
+      )}
+
+      {/* Modal para móviles */}
+      {isMobile && selectedItem && (
+        <Dialog
+          open={modalOpen}
+          onClose={handleCloseModal}
+          fullWidth
+          maxWidth="sm"
+          PaperProps={{
+            component: motion.div,
+            initial: { opacity: 0, y: 50 },
+            animate: { opacity: 1, y: 0 },
+            exit: { opacity: 0, y: 50 },
+            transition: { duration: 0.4 },
+            sx: { borderRadius: 3 },
+          }}
+        >
+          <DialogTitle>{selectedItem.year}</DialogTitle>
+          <DialogContent dividers>
+            <Typography variant="body1">
+              {selectedItem.description.split("\n").map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </Typography>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseModal} color="primary">
+              Cerrar
+            </Button>
+          </DialogActions>
+        </Dialog>
       )}
     </Container>
   );

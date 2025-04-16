@@ -59,6 +59,7 @@ function Projects() {
                 color: "text.primary",
                 textAlign: "center",
                 boxShadow: 3,
+                mx: { xs: "15px", sm: 0 }
               }}
             >
               <CardContent>
