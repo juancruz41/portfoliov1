@@ -42,16 +42,23 @@ function Header() {
       <AppBar position="static" sx={{ backgroundColor: "#1E1E1E", padding: "5px" }}>
         <Toolbar>
             <Box component="img" src={logo} alt="Logo" sx={{ height: 40, marginRight: 2 }} />
-          <Typography
-            component="a"
-            href="https://www.linkedin.com/in/juan-cruz-morales-gonzalez/"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="h6"
-            sx={{ flexGrow: 1, color: "#C69749" }}
-          >
-            Juan Cruz Gonzalez
-          </Typography>
+            <Typography
+              component="a"
+              href="https://www.linkedin.com/in/juan-cruz-morales-gonzalez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="h6"
+              sx={{
+                flexGrow: 1,
+                color: "#C69749",
+                textDecoration: "none", 
+              "&:hover": {
+                textDecoration: "none",
+              },
+              }}
+            >
+              Juan Cruz Gonzalez
+            </Typography>
 
           {/* RRSS escritorio */}
           <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>

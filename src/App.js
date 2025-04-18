@@ -20,6 +20,10 @@ const darkTheme = createTheme({
 });
 
 const techIcons = {
+  "2024 - Today": "https://www.svgrepo.com/show/493523/teacher-male.svg",
+  "2021 - 2024": "https://www.svgrepo.com/show/202973/coding-html.svg",
+  "2020 - 2021": "https://www.svgrepo.com/show/184718/networking-server.svg",
+  "2019 - 2020": "https://www.svgrepo.com/show/373370/tools.svg",
   "2025": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
   "2024": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
   "2023": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
@@ -53,7 +57,7 @@ function App() {
       <ParticlesBackground /> 
       <Header />
       <HeroSection />
-      <TimelineSection title="Experience" items={experienceItems} />
+      <TimelineSection title="Experience" items={experienceItems} useIcons={true} techIcons={techIcons} />
       <TimelineSection title="My Learning Path" items={learningPathItems} useIcons={true} techIcons={techIcons} />
       <Skills />
       <Projects />

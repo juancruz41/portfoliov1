@@ -37,7 +37,7 @@ function HeroSection() {
         View CV
       </Button>
 
-      {/* FORMULARIO DE CONTACTO */}
+      {/* Contact form*/}
       <Modal open={open} onClose={handleClose} aria-labelledby="contact-form">
         <Box
           sx={{
