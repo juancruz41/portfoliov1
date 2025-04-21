@@ -24,8 +24,8 @@ const projectList = [
   {
     title: "E-commerce Backend System",
     description: "A scalable backend platform with RESTful APIs, user authentication, and database management.",
-    github: "https://github.com/juancruz41",
-    demo: "https://github.com/juancruz41",
+    github: "https://github.com/juancruz41/backend-ecommerce",
+    demo: "https://backend-ecommerce-amqw.onrender.com",
     techs: ["Node", "MySQL"],
   },
   {
